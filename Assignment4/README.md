@@ -28,4 +28,4 @@ docker run -d -v my_volume:/opt/volume --name container2 ubuntu sleep 1000
 docker exec -it container2 bash
 ```
 
-![](./Assingment4-task1.png)
+![](./Assignment4-task1.png)
