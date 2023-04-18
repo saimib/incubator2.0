@@ -1,6 +1,6 @@
 ## 1. Create docker compose file for go app
 
-Dockerfile for go app
+Dockerfile for go app in working directory
 
 ```
 FROM golang as build-go
@@ -16,7 +16,7 @@ EXPOSE 8080
 CMD ["./go-app"]
 ```
 
-Docker compose file
+Docker compose file in working directory
 
 ```
 version: "3"
