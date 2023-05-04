@@ -45,7 +45,7 @@ docker history saimanibalan/go-app:v1
 
 ![](./Assignment2-task4.png)
 
-## 5. Push docker image to dokerhub
+## 5. Push docker image to dockerhub
 
 ```
 docker push saimanibalan/go-app:v1
