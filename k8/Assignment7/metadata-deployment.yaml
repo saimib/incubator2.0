@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: metadataservice-deployment
+  labels:
+    app: metadataserviceapp
+spec:
+  replicas: 2
+  template:
+    metadata:
+      name: metadataservice
+      labels:
+        app: metadataserviceapp
+    spec:
+      containers:
+        - name: metaservice
+          image: luckyganesh/metadata-service:v2
+          env:
+            - name: MONGODB_URI
+              valueFrom:
+                configMapKeyRef:
+                  name: metadata-service-configmap
+                  key: MONGODB_URI
+          ports:
+            - containerPort: 8080
+  selector:
+    matchLabels:
+      app: metadataserviceapp

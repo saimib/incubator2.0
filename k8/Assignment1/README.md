@@ -17,7 +17,7 @@ kubectl logs -f metadataservice metaservice
 ## 3. Check the Pod IP
 
 ```
-kubectl describe pod metadataservice
+kubectl get pod -o wide
 ```
 
 ![](./Assignment1-task3.png)
